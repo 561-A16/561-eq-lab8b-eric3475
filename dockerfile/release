@@ -7,7 +7,7 @@ ENV ASPNETCORE_URLS http://+:5000
 
 EXPOSE 5000
 
-COPY /publish/ /publish
+COPY /publish /publish
 
 WORKDIR /publish
 
