@@ -1,4 +1,4 @@
-# Lab 8
+a# Lab 8
 - Travail individuel
 - Compte pour 1 point
 - Remettre avant le début du prochain cours
@@ -7,7 +7,7 @@
 - Copier tout le contenu du lab 7 dans ce repository (**sans le dossier caché .git**)
 - Faire un commit et synchroniser
 
-## Objectifs 
+## Objectifs
 - Automatiser sur Travis:
   - L'exécution des tests
   - La création de l'image **webapp:release**
