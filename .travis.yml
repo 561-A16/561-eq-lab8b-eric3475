@@ -23,5 +23,5 @@ script:
   #- docker build -t webapp:test -f dockerfile/release .
   - sh ./scripts/travis-CI.sh
   - scp -o StrictHostKeyChecking=no ./scripts/getReleaseFromDockerHubAndStart.sh u1440590@159.203.33.172:~/
-  - ssh <user_id>@<adresse_ip> "chmod +x getReleaseFromDockerHubAndStart.sh"
-  - ssh <user_id>@<adresse_ip> "sh getReleaseFromDockerHubAndStart.sh"
+  - ssh 159.203.33.172:6518 "chmod +x getReleaseFromDockerHubAndStart.sh"
+  - ssh 159.203.33.172:6518 "sh getReleaseFromDockerHubAndStart.sh"
