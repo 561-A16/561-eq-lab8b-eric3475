@@ -28,5 +28,5 @@ after_success:
   - docker login -u=$DOCKER_USERNAME -p=$DOCKER_PASSWORD
   - docker push eric3475/webapp:latest
   - scp -o StrictHostKeyChecking=no ./scripts/getReleaseFromDockerHubAndStart.sh u1440590@159.203.33.172:~/
-  - ssh 159.203.33.172:6518 "chmod +x getReleaseFromDockerHubAndStart.sh"
-  - ssh 159.203.33.172:6518 "sh getReleaseFromDockerHubAndStart.sh"
+  - ssh u1440590@159.203.33.172 "chmod +x getReleaseFromDockerHubAndStart.sh"
+  - ssh u1440590@159.203.33.172 "sh getReleaseFromDockerHubAndStart.sh"
