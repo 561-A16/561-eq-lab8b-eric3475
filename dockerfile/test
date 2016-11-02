@@ -3,7 +3,7 @@
 ############################################################
 FROM ymazieres/dotnet:compile
 
-ENV ASPNETCORE_URLS http://+:5000
+ENV ASPNETCORE_URLS http://+:6518
 
 CMD ["sh", "/scripts/testAndPublish.sh"]
 COPY /scripts/testAndPublish.sh /scripts/testAndPublish.sh

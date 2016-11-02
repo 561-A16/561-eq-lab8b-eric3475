@@ -21,11 +21,11 @@ script:
   - docker build -t webapp:test -f dockerfile/test .
   - docker run -it --rm -v $HOME/cache:/root/.nuget/packages webapp:test
   - docker run -it --rm -v $PWD/publish:/root/publish -v $PWD/packages:/root/.nuget/packages webapp:test
-  - docker build -t webapp:test -f dockerfile/release .
+  - docker build -t webapp:release -f dockerfile/release .
 
 after_success:
   - docker tag webapp:release eric3475/webapp:latest
-  - docker login -u= $DOCKER_USERNAME -p=$DOCKER_PASSWORD
+  - docker login -u=$DOCKER_USERNAME -p=$DOCKER_PASSWORD
   - docker push eric3475/webapp:latest
   - scp -o StrictHostKeyChecking=no ./scripts/getReleaseFromDockerHubAndStart.sh u1440590@159.203.33.172:~/
   - ssh 159.203.33.172:6518 "chmod +x getReleaseFromDockerHubAndStart.sh"
